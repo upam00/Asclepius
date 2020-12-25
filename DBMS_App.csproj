@@ -62,46 +62,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\panelAdmin.cs">
+    <Compile Include="Panels\panelAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\panelAdmin.Designer.cs">
+    <Compile Include="Panels\panelAdmin.Designer.cs">
       <DependentUpon>panelAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\panelDept.cs">
+    <Compile Include="Panels\panelDept.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\panelDept.Designer.cs">
+    <Compile Include="Panels\panelDept.Designer.cs">
       <DependentUpon>panelDept.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Views\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home2.cs">
+    <Compile Include="Views\Home2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home2.Designer.cs">
+    <Compile Include="Views\Home2.Designer.cs">
       <DependentUpon>Home2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\panelDoctor.cs">
+    <Compile Include="Panels\panelDoctor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\panelDoctor.Designer.cs">
+    <Compile Include="Panels\panelDoctor.Designer.cs">
       <DependentUpon>panelDoctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\panelLog.cs">
+    <Compile Include="Panels\panelLog.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\panelLog.Designer.cs">
+    <Compile Include="Panels\panelLog.Designer.cs">
       <DependentUpon>panelLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\panelReceptionist.cs">
+    <Compile Include="Panels\panelReceptionist.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\panelReceptionist.Designer.cs">
+    <Compile Include="Panels\panelReceptionist.Designer.cs">
       <DependentUpon>panelReceptionist.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -112,25 +112,25 @@
     <EmbeddedResource Include="obj\Debug\DBMS_App.panelDept.resources" />
     <EmbeddedResource Include="obj\Debug\DBMS_App.panelLog.resources" />
     <EmbeddedResource Include="obj\Debug\DBMS_App.Properties.Resources.resources" />
-    <EmbeddedResource Include="Views\panelAdmin.resx">
+    <EmbeddedResource Include="Panels\panelAdmin.resx">
       <DependentUpon>panelAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home2.resx">
+    <EmbeddedResource Include="Views\Home2.resx">
       <DependentUpon>Home2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\panelDept.resx">
+    <EmbeddedResource Include="Panels\panelDept.resx">
       <DependentUpon>panelDept.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\panelDoctor.resx">
+    <EmbeddedResource Include="Panels\panelDoctor.resx">
       <DependentUpon>panelDoctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\panelLog.resx">
+    <EmbeddedResource Include="Panels\panelLog.resx">
       <DependentUpon>panelLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\panelReceptionist.resx">
+    <EmbeddedResource Include="Panels\panelReceptionist.resx">
       <DependentUpon>panelReceptionist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
