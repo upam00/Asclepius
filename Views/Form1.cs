@@ -30,9 +30,9 @@ namespace DBMS_App
                 //command.Connection.Close();
                 Program.sqlConnection.Close();    
                 //MessageBox.Show("Done");
-                Program.done = true;
-                //server = collegedb\\sqlexpress; Initial catalog = online_form; User id = sa; pwd = collegeqwerty
-                Close();
+                Program.done = 1;
+            //server = collegedb\\sqlexpress; Initial catalog = online_form; User id = sa; pwd = collegeqwerty
+            this.Dispose();
                 
                 
 
@@ -42,6 +42,17 @@ namespace DBMS_App
                //MessageBox.Show("Connection can't be made. Please check the Connection String. Try using only one '\' after server name.");
             //}
 
+
+        }
+
+       
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.done = 3;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

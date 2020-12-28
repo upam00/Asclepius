@@ -12,7 +12,7 @@ namespace DBMS_App
     {
         public static string con="";
         public static SqlConnection sqlConnection;
-        public static bool done = false;
+        public static int done = 0;
         public static TabControl tabControl1;
         public static int login = 0;
         /// <summary>
@@ -24,11 +24,12 @@ namespace DBMS_App
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            while(done==false)
+            while(done==0)
             {
                 //wait for conection string
             }
-            Application.Run(new Home2());
+            if(done==1)
+                Application.Run(new Home2());
 
 
         }

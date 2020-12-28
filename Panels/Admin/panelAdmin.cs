@@ -14,11 +14,12 @@ namespace DBMS_App
 {
     public partial class panelAdmin : UserControl
     {
-       
 
 
-        public panelAdmin()
+        public string ID;
+        public panelAdmin(string ID_No)
         {
+            this.ID = ID_No;
             InitializeComponent();
         }
 
@@ -36,7 +37,7 @@ namespace DBMS_App
         private void panelAdmin_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-            panelAdmin_Main main = new panelAdmin_Main();
+            panelAdmin_Main main = new panelAdmin_Main(ID);
             main.Dock = DockStyle.Fill;
             this.Controls.Add(main);
         }

@@ -20,7 +20,8 @@ namespace DBMS_App.Panels.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panelAdmin_Main main = new panelAdmin_Main();
+            string ID = "";
+            panelAdmin_Main main = new panelAdmin_Main(ID);
             main.Dock = DockStyle.Fill;
             this.Parent.Controls.Add(main);
             this.Dispose();

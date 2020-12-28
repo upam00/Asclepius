@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBMS_App.Panels;
+using System.Data.SqlClient;
 
 namespace DBMS_App
 {
@@ -28,25 +29,66 @@ namespace DBMS_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Program.login%4 == 0)
+
+            string Id = textBox1.Text;
+            string pwd = textBox2.Text;
+            string type = "";
+            String query = "Select Pword from Employee where Emp_ID =" + Id + ";";
+            SqlCommand command = new SqlCommand(query, Program.sqlConnection);
+            Program.sqlConnection.Open();
+            try
             {
-                this.Parent.Controls.Add(new panelAdmin());
+                SqlDataReader reader = command.ExecuteReader();
+                reader.Read();
+
+                if(pwd==reader.GetString(0))
+                {
+                    reader.Close();
+                    string newQuery = "Select Job_Type from Employee where Emp_ID =" + Id + ";";
+                    SqlCommand newCommand = new SqlCommand(newQuery, Program.sqlConnection);
+                    reader = newCommand.ExecuteReader();
+                    reader.Read();
+                    type = reader.GetString(0);
+                    reader.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Password");
+                }
+                reader.Close();
+            }
+            catch(Exception ex)
+            {
+               
+               MessageBox.Show("Invalid ID or Password");
+              
+                
+
+            }
+
+
+            Program.sqlConnection.Close();
+
+            if (type=="Admin")
+            {
+                panelAdmin newPanel = new panelAdmin(Id);
+                this.Parent.Controls.Add(newPanel);
                 this.Dispose();
                 Program.login++;
             }
-            else if(Program.login%4 == 1)
+            else if(type=="Doctor")
             {
                 this.Parent.Controls.Add(new panelDoctor());
                 this.Dispose();
                 Program.login++;
             }
-            else if(Program.login%4 == 2)
+            else if(type == "Receptionist")
             {
                 this.Parent.Controls.Add(new panelReceptionist());
                 this.Dispose();
                 Program.login++;
             }
-            else if(Program.login%4 == 3)
+            else if(type=="Pharmacist")
             {
                 this.Parent.Controls.Add(new panelDept());
                 this.Dispose();
