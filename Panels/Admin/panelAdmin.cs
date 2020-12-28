@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DBMS_App.Panels.Admin;
+using DBMS_App.Panels;
 
 namespace DBMS_App
 {
-    public partial class panelDept : UserControl
+    public partial class panelAdmin : UserControl
     {
-        public panelDept()
+       
+
+
+        public panelAdmin()
         {
             InitializeComponent();
-            this.Dock = DockStyle.Fill;
         }
+
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -25,7 +31,14 @@ namespace DBMS_App
             tb.Controls.Add(new panelLog());
             Program.tabControl1.TabPages.Add(tb);
             Program.tabControl1.SelectedIndex = Program.tabControl1.TabCount - 1;
+        }
 
+        private void panelAdmin_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+            panelAdmin_Main main = new panelAdmin_Main();
+            main.Dock = DockStyle.Fill;
+            this.Controls.Add(main);
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DBMS_App
+namespace DBMS_App.Panels.Department
 {
-    public partial class panelReceptionist : UserControl
+    public partial class panelDept_Main : UserControl
     {
-        public panelReceptionist()
+        public panelDept_Main()
         {
             InitializeComponent();
         }

@@ -14,6 +14,7 @@ namespace DBMS_App
         public static SqlConnection sqlConnection;
         public static bool done = false;
         public static TabControl tabControl1;
+        public static int login = 0;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
