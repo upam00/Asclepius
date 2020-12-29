@@ -6,34 +6,24 @@
 <br>
 
 ### Model Architecture-
-The keras model is created by training SmallerVGGNet from scratch on around 2200 face images (~1100 for each class). Face region is cropped by applying face detection using cvlib on the images gathered from Google Images. It acheived around 96% training accuracy and ~90% validation accuracy. (20% of the dataset is used for validation)
+A hospital management software for various parties associated with a hospital yo interact with each other and store information. A voice assistant assists doctors to store information without the need of physically writing medical records. Server side has been built using MS SQL server and frontend has been built using C#.
 <div align="center" class="row">
-  <img src="https://i.imgur.com/8vmUpwt.jpg" width="500"/>
+  <img src="https://i.imgur.com/8vmUpwt.jpg" width="600"/>
 </div>
 
+
 ### Technologies used
-* Tensorflow
-* Keras
-* Flask
-* OpenCV
-
-### Steps to run user interface
-1. Run the file Gender Detection.exe
-
-### Steps to run the application
-
-1. `cd Gender-Paint`
-   
-2. `pip3 install -r requirements.txt` (only for the first time) then `python3 app.py`
-
-3. Add or Edit the routes and functions in the file app.py
-
-
+* WinForms
+* Microsoft Speech Platform 11 SDK
+* C#
+* MS SQL Server
 
 <hr>
 
 ### Authors
 
-##### [Rabijit Singh](https://github.com/adiXcodr)
+##### [Upam Sarmah](https://github.com/upam00)
+##### [Rabijit Singh](https://github.com/Neyen108)
 ##### [Subhasish Goswami](https://github.com/subhasishgosw5)
-##### [Upam Sarmah](https://github.com/upam00) 
+##### [Rabijit Singh](https://github.com/kaushikkumarbora)
+##### [Rabijit Singh](https://github.com/rabijitsingh)
