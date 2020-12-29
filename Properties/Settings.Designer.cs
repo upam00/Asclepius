@@ -33,5 +33,15 @@ namespace DBMS_App.Properties {
                 return ((string)(this["NayanConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=collegedb\\SQLEXPRESS;Initial Catalog=HospitalDB;User ID=sa")]
+        public string HospitalDBConnectionString {
+            get {
+                return ((string)(this["HospitalDBConnectionString"]));
+            }
+        }
     }
 }

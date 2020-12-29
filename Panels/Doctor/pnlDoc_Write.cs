@@ -12,9 +12,12 @@ namespace DBMS_App.Panels.Doctor
 {
     public partial class pnlDoc_Write : UserControl
     {
-        public pnlDoc_Write()
+        String ID = "";
+        public pnlDoc_Write(String ID)
         {
+            this.ID = ID;
             InitializeComponent();
+            lblID.Text = "ID: " + ID;
         }
 
         private void pnlDoc_Write_Load(object sender, EventArgs e)
@@ -23,10 +26,15 @@ namespace DBMS_App.Panels.Doctor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pnlDoc_Main main = new pnlDoc_Main();
+            pnlDoc_Main main = new pnlDoc_Main(ID);
             main.Dock = DockStyle.Fill;
             this.Parent.Controls.Add(main);
             this.Dispose();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

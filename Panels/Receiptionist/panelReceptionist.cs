@@ -15,9 +15,12 @@ namespace DBMS_App
 {
     public partial class panelReceptionist : UserControl
     {
-        public panelReceptionist()
+
+        String ID = "";
+        public panelReceptionist(string ID)
         {
             InitializeComponent();
+            this.ID = ID;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,7 +43,7 @@ namespace DBMS_App
         private void panelReceptionist_Load(object sender, EventArgs e)
         {
            this.Dock = DockStyle.Fill;
-           pnlRecp_Main main = new pnlRecp_Main();
+           pnlRecp_Main main = new pnlRecp_Main(ID);
             main.Dock = DockStyle.Fill;
             this.Controls.Add(main);
         }

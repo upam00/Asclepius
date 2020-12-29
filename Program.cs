@@ -15,6 +15,7 @@ namespace DBMS_App
         public static int done = 0;
         public static TabControl tabControl1;
         public static int login = 0;
+        public static string strConnectionUserName = "";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

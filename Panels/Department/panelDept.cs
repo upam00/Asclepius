@@ -14,8 +14,10 @@ namespace DBMS_App
 {
     public partial class panelDept : UserControl
     {
-        public panelDept()
+        string Id = "";
+        public panelDept(string ID)
         {
+            this.Id = ID;
             InitializeComponent();
             this.Dock = DockStyle.Fill;
         }
@@ -41,7 +43,7 @@ namespace DBMS_App
         private void panelDept_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-            panelDept_Main main = new panelDept_Main();
+            panelDept_Main main = new panelDept_Main(Id);
             main.Dock = DockStyle.Fill;
             this.Controls.Add(main);
         }

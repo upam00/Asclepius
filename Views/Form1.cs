@@ -18,6 +18,7 @@ namespace DBMS_App
         private void conBtn_Click(object sender, EventArgs e)
         {
             Program.con = txtCon.Text;
+
            
             //try
             //{
@@ -28,9 +29,10 @@ namespace DBMS_App
                 //command.Connection.Open();
                // command.ExecuteNonQuery();
                 //command.Connection.Close();
-                Program.sqlConnection.Close();    
-                //MessageBox.Show("Done");
-                Program.done = 1;
+                Program.sqlConnection.Close();
+            //MessageBox.Show("Done");
+            Program.strConnectionUserName = txtCon.Text;
+            Program.done = 1;
             //server = collegedb\\sqlexpress; Initial catalog = online_form; User id = sa; pwd = collegeqwerty
             this.Dispose();
                 

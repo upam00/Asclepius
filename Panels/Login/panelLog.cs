@@ -78,19 +78,19 @@ namespace DBMS_App
             }
             else if(type=="Doctor")
             {
-                this.Parent.Controls.Add(new panelDoctor());
+                this.Parent.Controls.Add(new panelDoctor(Id));
                 this.Dispose();
                 Program.login++;
             }
             else if(type == "Receptionist")
             {
-                this.Parent.Controls.Add(new panelReceptionist());
+                this.Parent.Controls.Add(new panelReceptionist(Id));
                 this.Dispose();
                 Program.login++;
             }
             else if(type=="Pharmacist")
             {
-                this.Parent.Controls.Add(new panelDept());
+                this.Parent.Controls.Add(new panelDept(Id));
                 this.Dispose();
                 Program.login++;
             }

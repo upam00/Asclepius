@@ -51,6 +51,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +63,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HospitalDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Panels\Admin\panelAdmin_Add.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +127,12 @@
     <Compile Include="Panels\Doctor\pnlDoc_Write.Designer.cs">
       <DependentUpon>pnlDoc_Write.cs</DependentUpon>
     </Compile>
+    <Compile Include="Panels\Receiptionist\panelReceptionist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Receiptionist\panelReceptionist.Designer.cs">
+      <DependentUpon>panelReceptionist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Panels\Receiptionist\pnlRecp_Del.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +151,12 @@
     <Compile Include="Panels\Receiptionist\pnlRecp_view.Designer.cs">
       <DependentUpon>pnlRecp_view.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Properties\Settings.cs" />
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,19 +181,25 @@
     <Compile Include="Panels\Login\panelLog.Designer.cs">
       <DependentUpon>panelLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Panels\Receiptionist\panelReceptionist.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Panels\Receiptionist\panelReceptionist.Designer.cs">
-      <DependentUpon>panelReceptionist.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="obj\Debug\DBMS_App.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\DBMS_App.Home2.resources" />
     <EmbeddedResource Include="obj\Debug\DBMS_App.panelAdmin.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.panelAdmin_Add.resources" />
     <EmbeddedResource Include="obj\Debug\DBMS_App.panelDept.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.panelDoctor.resources" />
     <EmbeddedResource Include="obj\Debug\DBMS_App.panelLog.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.panelReceptionist.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.Panels.Admin.panelAdmin_Main.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.Panels.Admin.panelAdmin_Remove.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.Panels.Department.panelDept_Main.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.Panels.Doctor.pnlDoc_Main.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.Panels.Doctor.pnlDoc_Read.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.Panels.Doctor.pnlDoc_Write.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.Panels.Receiptionist.pnlRecp_Del.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.Panels.Receiptionist.pnlRecp_Main.resources" />
+    <EmbeddedResource Include="obj\Debug\DBMS_App.Panels.Receiptionist.pnlRecp_view.resources" />
     <EmbeddedResource Include="obj\Debug\DBMS_App.Properties.Resources.resources" />
     <EmbeddedResource Include="Panels\Admin\panelAdmin_Add.resx">
       <DependentUpon>panelAdmin_Add.cs</DependentUpon>
@@ -196,6 +225,9 @@
     <EmbeddedResource Include="Panels\Doctor\pnlDoc_Write.resx">
       <DependentUpon>pnlDoc_Write.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Receiptionist\panelReceptionist.resx">
+      <DependentUpon>panelReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Panels\Receiptionist\pnlRecp_Del.resx">
       <DependentUpon>pnlRecp_Del.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +236,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\Receiptionist\pnlRecp_view.resx">
       <DependentUpon>pnlRecp_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -220,27 +257,38 @@
     <EmbeddedResource Include="Panels\Login\panelLog.resx">
       <DependentUpon>panelLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panels\Receiptionist\panelReceptionist.resx">
-      <DependentUpon>panelReceptionist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <SubType>Designer</SubType>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <None Include="bin\Debug\DBMS_App.exe.config" />
+    <None Include="HospitalDBDataSet.xsc">
+      <DependentUpon>HospitalDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDBDataSet.xss">
+      <DependentUpon>HospitalDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDBDataSet1.xsc">
+      <DependentUpon>HospitalDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDBDataSet1.xss">
+      <DependentUpon>HospitalDBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="obj\Debug\DBMS_App.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\DBMS_App.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\DBMS_App.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <DependentUpon>Resources.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -268,9 +316,14 @@
     <Content Include="obj\Debug\DBMS_App.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\DBMS_App.exe" />
     <Content Include="obj\Debug\DBMS_App.pdb" />
+    <Content Include="obj\Debug\TempPE\HospitalDBDataSet.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\HospitalDBDataSet1.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\HospitalDBDataSet2.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
+    <Folder Include="Junk\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

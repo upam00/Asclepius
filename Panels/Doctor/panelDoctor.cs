@@ -15,9 +15,12 @@ namespace DBMS_App
 {
     public partial class panelDoctor : UserControl
     {
-        public panelDoctor()
+        String ID = "";
+        public panelDoctor(string ID)
         {
             InitializeComponent();
+            this.ID = ID;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -32,7 +35,7 @@ namespace DBMS_App
         private void panelDoctor_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-            pnlDoc_Main main = new pnlDoc_Main();
+            pnlDoc_Main main = new pnlDoc_Main(ID);
             main.Dock = DockStyle.Fill;
             this.Controls.Add(main);
         }
