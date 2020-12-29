@@ -23,7 +23,7 @@ A hospital management software for various parties associated with a hospital yo
 ### Authors
 
 ##### [Upam Sarmah](https://github.com/upam00)
-##### [Rabijit Singh](https://github.com/Neyen108)
-##### [Subhasish Goswami](https://github.com/subhasishgosw5)
+##### [Nayanjeet Saikia](https://github.com/Neyen108)
+##### [Kaushik Kumar Bora](https://github.com/subhasishgosw5)
 ##### [Rabijit Singh](https://github.com/kaushikkumarbora)
 ##### [Rabijit Singh](https://github.com/rabijitsingh)
