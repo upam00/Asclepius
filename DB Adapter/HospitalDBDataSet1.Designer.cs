@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace DBMS_App {
+namespace DBMS_App.DB_Adapter {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace DBMS_App {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("HospitalDBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("HospitalDBDataSet1")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class HospitalDBDataSet : global::System.Data.DataSet {
+    public partial class HospitalDBDataSet1 : global::System.Data.DataSet {
         
-        private In_PatientDataTable tableIn_Patient;
+        private PatientDataTable tablePatient;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public HospitalDBDataSet() {
+        public HospitalDBDataSet1() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace DBMS_App {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected HospitalDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected HospitalDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace DBMS_App {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["In_Patient"] != null)) {
-                    base.Tables.Add(new In_PatientDataTable(ds.Tables["In_Patient"]));
+                if ((ds.Tables["Patient"] != null)) {
+                    base.Tables.Add(new PatientDataTable(ds.Tables["Patient"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace DBMS_App {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public In_PatientDataTable In_Patient {
+        public PatientDataTable Patient {
             get {
-                return this.tableIn_Patient;
+                return this.tablePatient;
             }
         }
         
@@ -127,7 +127,7 @@ namespace DBMS_App {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            HospitalDBDataSet cln = ((HospitalDBDataSet)(base.Clone()));
+            HospitalDBDataSet1 cln = ((HospitalDBDataSet1)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace DBMS_App {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["In_Patient"] != null)) {
-                    base.Tables.Add(new In_PatientDataTable(ds.Tables["In_Patient"]));
+                if ((ds.Tables["Patient"] != null)) {
+                    base.Tables.Add(new PatientDataTable(ds.Tables["Patient"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace DBMS_App {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableIn_Patient = ((In_PatientDataTable)(base.Tables["In_Patient"]));
+            this.tablePatient = ((PatientDataTable)(base.Tables["Patient"]));
             if ((initTable == true)) {
-                if ((this.tableIn_Patient != null)) {
-                    this.tableIn_Patient.InitVars();
+                if ((this.tablePatient != null)) {
+                    this.tablePatient.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace DBMS_App {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "HospitalDBDataSet";
+            this.DataSetName = "HospitalDBDataSet1";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/HospitalDBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/HospitalDBDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableIn_Patient = new In_PatientDataTable();
-            base.Tables.Add(this.tableIn_Patient);
+            this.tablePatient = new PatientDataTable();
+            base.Tables.Add(this.tablePatient);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeIn_Patient() {
+        private bool ShouldSerializePatient() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace DBMS_App {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            HospitalDBDataSet ds = new HospitalDBDataSet();
+            HospitalDBDataSet1 ds = new HospitalDBDataSet1();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,37 @@ namespace DBMS_App {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void In_PatientRowChangeEventHandler(object sender, In_PatientRowChangeEvent e);
+        public delegate void PatientRowChangeEventHandler(object sender, PatientRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class In_PatientDataTable : global::System.Data.TypedTableBase<In_PatientRow> {
+        public partial class PatientDataTable : global::System.Data.TypedTableBase<PatientRow> {
             
             private global::System.Data.DataColumn columnPatient_ID;
             
-            private global::System.Data.DataColumn columnDate_of_admission;
+            private global::System.Data.DataColumn columnF_Name;
             
-            private global::System.Data.DataColumn columnRoom_no;
+            private global::System.Data.DataColumn columnM_Name;
             
-            private global::System.Data.DataColumn columnAssigned_receptionist_ID;
+            private global::System.Data.DataColumn columnL_Name;
+            
+            private global::System.Data.DataColumn columnAge;
+            
+            private global::System.Data.DataColumn columnSex;
+            
+            private global::System.Data.DataColumn columnPatient_Type;
+            
+            private global::System.Data.DataColumn columnCheck_in_Receptionist_ID;
+            
+            private global::System.Data.DataColumn columnAssigned_Doc_ID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public In_PatientDataTable() {
-                this.TableName = "In_Patient";
+            public PatientDataTable() {
+                this.TableName = "Patient";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +308,7 @@ namespace DBMS_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal In_PatientDataTable(global::System.Data.DataTable table) {
+            internal PatientDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,7 +325,7 @@ namespace DBMS_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected In_PatientDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PatientDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -330,25 +340,65 @@ namespace DBMS_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Date_of_admissionColumn {
+            public global::System.Data.DataColumn F_NameColumn {
                 get {
-                    return this.columnDate_of_admission;
+                    return this.columnF_Name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Room_noColumn {
+            public global::System.Data.DataColumn M_NameColumn {
                 get {
-                    return this.columnRoom_no;
+                    return this.columnM_Name;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Assigned_receptionist_IDColumn {
+            public global::System.Data.DataColumn L_NameColumn {
                 get {
-                    return this.columnAssigned_receptionist_ID;
+                    return this.columnL_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AgeColumn {
+                get {
+                    return this.columnAge;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SexColumn {
+                get {
+                    return this.columnSex;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Patient_TypeColumn {
+                get {
+                    return this.columnPatient_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Check_in_Receptionist_IDColumn {
+                get {
+                    return this.columnCheck_in_Receptionist_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Assigned_Doc_IDColumn {
+                get {
+                    return this.columnAssigned_Doc_ID;
                 }
             }
             
@@ -363,55 +413,60 @@ namespace DBMS_App {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public In_PatientRow this[int index] {
+            public PatientRow this[int index] {
                 get {
-                    return ((In_PatientRow)(this.Rows[index]));
+                    return ((PatientRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event In_PatientRowChangeEventHandler In_PatientRowChanging;
+            public event PatientRowChangeEventHandler PatientRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event In_PatientRowChangeEventHandler In_PatientRowChanged;
+            public event PatientRowChangeEventHandler PatientRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event In_PatientRowChangeEventHandler In_PatientRowDeleting;
+            public event PatientRowChangeEventHandler PatientRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event In_PatientRowChangeEventHandler In_PatientRowDeleted;
+            public event PatientRowChangeEventHandler PatientRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddIn_PatientRow(In_PatientRow row) {
+            public void AddPatientRow(PatientRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public In_PatientRow AddIn_PatientRow(int Patient_ID, System.DateTime Date_of_admission, int Room_no, int Assigned_receptionist_ID) {
-                In_PatientRow rowIn_PatientRow = ((In_PatientRow)(this.NewRow()));
+            public PatientRow AddPatientRow(int Patient_ID, string F_Name, string M_Name, string L_Name, int Age, string Sex, string Patient_Type, int Check_in_Receptionist_ID, int Assigned_Doc_ID) {
+                PatientRow rowPatientRow = ((PatientRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Patient_ID,
-                        Date_of_admission,
-                        Room_no,
-                        Assigned_receptionist_ID};
-                rowIn_PatientRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowIn_PatientRow);
-                return rowIn_PatientRow;
+                        F_Name,
+                        M_Name,
+                        L_Name,
+                        Age,
+                        Sex,
+                        Patient_Type,
+                        Check_in_Receptionist_ID,
+                        Assigned_Doc_ID};
+                rowPatientRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPatientRow);
+                return rowPatientRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public In_PatientRow FindByPatient_ID(int Patient_ID) {
-                return ((In_PatientRow)(this.Rows.Find(new object[] {
+            public PatientRow FindByPatient_ID(int Patient_ID) {
+                return ((PatientRow)(this.Rows.Find(new object[] {
                             Patient_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                In_PatientDataTable cln = ((In_PatientDataTable)(base.Clone()));
+                PatientDataTable cln = ((PatientDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,16 +474,21 @@ namespace DBMS_App {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new In_PatientDataTable();
+                return new PatientDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnPatient_ID = base.Columns["Patient_ID"];
-                this.columnDate_of_admission = base.Columns["Date_of_admission"];
-                this.columnRoom_no = base.Columns["Room_no"];
-                this.columnAssigned_receptionist_ID = base.Columns["Assigned_receptionist_ID"];
+                this.columnF_Name = base.Columns["F_Name"];
+                this.columnM_Name = base.Columns["M_Name"];
+                this.columnL_Name = base.Columns["L_Name"];
+                this.columnAge = base.Columns["Age"];
+                this.columnSex = base.Columns["Sex"];
+                this.columnPatient_Type = base.Columns["Patient_Type"];
+                this.columnCheck_in_Receptionist_ID = base.Columns["Check_in_Receptionist_ID"];
+                this.columnAssigned_Doc_ID = base.Columns["Assigned_Doc_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -436,42 +496,61 @@ namespace DBMS_App {
             private void InitClass() {
                 this.columnPatient_ID = new global::System.Data.DataColumn("Patient_ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPatient_ID);
-                this.columnDate_of_admission = new global::System.Data.DataColumn("Date_of_admission", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDate_of_admission);
-                this.columnRoom_no = new global::System.Data.DataColumn("Room_no", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRoom_no);
-                this.columnAssigned_receptionist_ID = new global::System.Data.DataColumn("Assigned_receptionist_ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAssigned_receptionist_ID);
+                this.columnF_Name = new global::System.Data.DataColumn("F_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnF_Name);
+                this.columnM_Name = new global::System.Data.DataColumn("M_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnM_Name);
+                this.columnL_Name = new global::System.Data.DataColumn("L_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnL_Name);
+                this.columnAge = new global::System.Data.DataColumn("Age", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAge);
+                this.columnSex = new global::System.Data.DataColumn("Sex", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSex);
+                this.columnPatient_Type = new global::System.Data.DataColumn("Patient_Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPatient_Type);
+                this.columnCheck_in_Receptionist_ID = new global::System.Data.DataColumn("Check_in_Receptionist_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCheck_in_Receptionist_ID);
+                this.columnAssigned_Doc_ID = new global::System.Data.DataColumn("Assigned_Doc_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAssigned_Doc_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPatient_ID}, true));
                 this.columnPatient_ID.AllowDBNull = false;
                 this.columnPatient_ID.Unique = true;
+                this.columnF_Name.AllowDBNull = false;
+                this.columnF_Name.MaxLength = 50;
+                this.columnM_Name.MaxLength = 50;
+                this.columnL_Name.AllowDBNull = false;
+                this.columnL_Name.MaxLength = 50;
+                this.columnAge.AllowDBNull = false;
+                this.columnSex.AllowDBNull = false;
+                this.columnSex.MaxLength = 1;
+                this.columnPatient_Type.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public In_PatientRow NewIn_PatientRow() {
-                return ((In_PatientRow)(this.NewRow()));
+            public PatientRow NewPatientRow() {
+                return ((PatientRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new In_PatientRow(builder);
+                return new PatientRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(In_PatientRow);
+                return typeof(PatientRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.In_PatientRowChanged != null)) {
-                    this.In_PatientRowChanged(this, new In_PatientRowChangeEvent(((In_PatientRow)(e.Row)), e.Action));
+                if ((this.PatientRowChanged != null)) {
+                    this.PatientRowChanged(this, new PatientRowChangeEvent(((PatientRow)(e.Row)), e.Action));
                 }
             }
             
@@ -479,8 +558,8 @@ namespace DBMS_App {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.In_PatientRowChanging != null)) {
-                    this.In_PatientRowChanging(this, new In_PatientRowChangeEvent(((In_PatientRow)(e.Row)), e.Action));
+                if ((this.PatientRowChanging != null)) {
+                    this.PatientRowChanging(this, new PatientRowChangeEvent(((PatientRow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,8 +567,8 @@ namespace DBMS_App {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.In_PatientRowDeleted != null)) {
-                    this.In_PatientRowDeleted(this, new In_PatientRowChangeEvent(((In_PatientRow)(e.Row)), e.Action));
+                if ((this.PatientRowDeleted != null)) {
+                    this.PatientRowDeleted(this, new PatientRowChangeEvent(((PatientRow)(e.Row)), e.Action));
                 }
             }
             
@@ -497,14 +576,14 @@ namespace DBMS_App {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.In_PatientRowDeleting != null)) {
-                    this.In_PatientRowDeleting(this, new In_PatientRowChangeEvent(((In_PatientRow)(e.Row)), e.Action));
+                if ((this.PatientRowDeleting != null)) {
+                    this.PatientRowDeleting(this, new PatientRowChangeEvent(((PatientRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveIn_PatientRow(In_PatientRow row) {
+            public void RemovePatientRow(PatientRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -513,7 +592,7 @@ namespace DBMS_App {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HospitalDBDataSet ds = new HospitalDBDataSet();
+                HospitalDBDataSet1 ds = new HospitalDBDataSet1();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -531,7 +610,7 @@ namespace DBMS_App {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "In_PatientDataTable";
+                attribute2.FixedValue = "PatientDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -575,110 +654,182 @@ namespace DBMS_App {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class In_PatientRow : global::System.Data.DataRow {
+        public partial class PatientRow : global::System.Data.DataRow {
             
-            private In_PatientDataTable tableIn_Patient;
+            private PatientDataTable tablePatient;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal In_PatientRow(global::System.Data.DataRowBuilder rb) : 
+            internal PatientRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableIn_Patient = ((In_PatientDataTable)(this.Table));
+                this.tablePatient = ((PatientDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Patient_ID {
                 get {
-                    return ((int)(this[this.tableIn_Patient.Patient_IDColumn]));
+                    return ((int)(this[this.tablePatient.Patient_IDColumn]));
                 }
                 set {
-                    this[this.tableIn_Patient.Patient_IDColumn] = value;
+                    this[this.tablePatient.Patient_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime Date_of_admission {
+            public string F_Name {
+                get {
+                    return ((string)(this[this.tablePatient.F_NameColumn]));
+                }
+                set {
+                    this[this.tablePatient.F_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string M_Name {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableIn_Patient.Date_of_admissionColumn]));
+                        return ((string)(this[this.tablePatient.M_NameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Date_of_admission\' in table \'In_Patient\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'M_Name\' in table \'Patient\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIn_Patient.Date_of_admissionColumn] = value;
+                    this[this.tablePatient.M_NameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Room_no {
+            public string L_Name {
+                get {
+                    return ((string)(this[this.tablePatient.L_NameColumn]));
+                }
+                set {
+                    this[this.tablePatient.L_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Age {
+                get {
+                    return ((int)(this[this.tablePatient.AgeColumn]));
+                }
+                set {
+                    this[this.tablePatient.AgeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Sex {
+                get {
+                    return ((string)(this[this.tablePatient.SexColumn]));
+                }
+                set {
+                    this[this.tablePatient.SexColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Patient_Type {
                 get {
                     try {
-                        return ((int)(this[this.tableIn_Patient.Room_noColumn]));
+                        return ((string)(this[this.tablePatient.Patient_TypeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Room_no\' in table \'In_Patient\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Patient_Type\' in table \'Patient\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIn_Patient.Room_noColumn] = value;
+                    this[this.tablePatient.Patient_TypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Assigned_receptionist_ID {
+            public int Check_in_Receptionist_ID {
                 get {
                     try {
-                        return ((int)(this[this.tableIn_Patient.Assigned_receptionist_IDColumn]));
+                        return ((int)(this[this.tablePatient.Check_in_Receptionist_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Assigned_receptionist_ID\' in table \'In_Patient\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Check_in_Receptionist_ID\' in table \'Patient\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIn_Patient.Assigned_receptionist_IDColumn] = value;
+                    this[this.tablePatient.Check_in_Receptionist_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDate_of_admissionNull() {
-                return this.IsNull(this.tableIn_Patient.Date_of_admissionColumn);
+            public int Assigned_Doc_ID {
+                get {
+                    try {
+                        return ((int)(this[this.tablePatient.Assigned_Doc_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Assigned_Doc_ID\' in table \'Patient\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePatient.Assigned_Doc_IDColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDate_of_admissionNull() {
-                this[this.tableIn_Patient.Date_of_admissionColumn] = global::System.Convert.DBNull;
+            public bool IsM_NameNull() {
+                return this.IsNull(this.tablePatient.M_NameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsRoom_noNull() {
-                return this.IsNull(this.tableIn_Patient.Room_noColumn);
+            public void SetM_NameNull() {
+                this[this.tablePatient.M_NameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetRoom_noNull() {
-                this[this.tableIn_Patient.Room_noColumn] = global::System.Convert.DBNull;
+            public bool IsPatient_TypeNull() {
+                return this.IsNull(this.tablePatient.Patient_TypeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsAssigned_receptionist_IDNull() {
-                return this.IsNull(this.tableIn_Patient.Assigned_receptionist_IDColumn);
+            public void SetPatient_TypeNull() {
+                this[this.tablePatient.Patient_TypeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetAssigned_receptionist_IDNull() {
-                this[this.tableIn_Patient.Assigned_receptionist_IDColumn] = global::System.Convert.DBNull;
+            public bool IsCheck_in_Receptionist_IDNull() {
+                return this.IsNull(this.tablePatient.Check_in_Receptionist_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCheck_in_Receptionist_IDNull() {
+                this[this.tablePatient.Check_in_Receptionist_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAssigned_Doc_IDNull() {
+                return this.IsNull(this.tablePatient.Assigned_Doc_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAssigned_Doc_IDNull() {
+                this[this.tablePatient.Assigned_Doc_IDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -686,22 +837,22 @@ namespace DBMS_App {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class In_PatientRowChangeEvent : global::System.EventArgs {
+        public class PatientRowChangeEvent : global::System.EventArgs {
             
-            private In_PatientRow eventRow;
+            private PatientRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public In_PatientRowChangeEvent(In_PatientRow row, global::System.Data.DataRowAction action) {
+            public PatientRowChangeEvent(PatientRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public In_PatientRow Row {
+            public PatientRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -717,7 +868,7 @@ namespace DBMS_App {
         }
     }
 }
-namespace DBMS_App.HospitalDBDataSetTableAdapters {
+namespace DBMS_App.DB_Adapter.HospitalDBDataSet1TableAdapters {
     
     
     /// <summary>
@@ -729,7 +880,7 @@ namespace DBMS_App.HospitalDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class In_PatientTableAdapter : global::System.ComponentModel.Component {
+    public partial class PatientTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -743,7 +894,7 @@ namespace DBMS_App.HospitalDBDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public In_PatientTableAdapter() {
+        public PatientTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -840,48 +991,75 @@ namespace DBMS_App.HospitalDBDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "In_Patient";
+            tableMapping.DataSetTable = "Patient";
             tableMapping.ColumnMappings.Add("Patient_ID", "Patient_ID");
-            tableMapping.ColumnMappings.Add("Date_of_admission", "Date_of_admission");
-            tableMapping.ColumnMappings.Add("Room_no", "Room_no");
-            tableMapping.ColumnMappings.Add("Assigned_receptionist_ID", "Assigned_receptionist_ID");
+            tableMapping.ColumnMappings.Add("F_Name", "F_Name");
+            tableMapping.ColumnMappings.Add("M_Name", "M_Name");
+            tableMapping.ColumnMappings.Add("L_Name", "L_Name");
+            tableMapping.ColumnMappings.Add("Age", "Age");
+            tableMapping.ColumnMappings.Add("Sex", "Sex");
+            tableMapping.ColumnMappings.Add("Patient_Type", "Patient_Type");
+            tableMapping.ColumnMappings.Add("Check_in_Receptionist_ID", "Check_in_Receptionist_ID");
+            tableMapping.ColumnMappings.Add("Assigned_Doc_ID", "Assigned_Doc_ID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[In_Patient] WHERE (([Patient_ID] = @Original_Patient_ID) AND ((@IsNull_Date_of_admission = 1 AND [Date_of_admission] IS NULL) OR ([Date_of_admission] = @Original_Date_of_admission)) AND ((@IsNull_Room_no = 1 AND [Room_no] IS NULL) OR ([Room_no] = @Original_Room_no)) AND ((@IsNull_Assigned_receptionist_ID = 1 AND [Assigned_receptionist_ID] IS NULL) OR ([Assigned_receptionist_ID] = @Original_Assigned_receptionist_ID)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Patient] WHERE (([Patient_ID] = @Original_Patient_ID) AND ([F_Name] = @Original_F_Name) AND ((@IsNull_M_Name = 1 AND [M_Name] IS NULL) OR ([M_Name] = @Original_M_Name)) AND ([L_Name] = @Original_L_Name) AND ([Age] = @Original_Age) AND ([Sex] = @Original_Sex) AND ((@IsNull_Patient_Type = 1 AND [Patient_Type] IS NULL) OR ([Patient_Type] = @Original_Patient_Type)) AND ((@IsNull_Check_in_Receptionist_ID = 1 AND [Check_in_Receptionist_ID] IS NULL) OR ([Check_in_Receptionist_ID] = @Original_Check_in_Receptionist_ID)) AND ((@IsNull_Assigned_Doc_ID = 1 AND [Assigned_Doc_ID] IS NULL) OR ([Assigned_Doc_ID] = @Original_Assigned_Doc_ID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Patient_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date_of_admission", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date_of_admission", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date_of_admission", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date_of_admission", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Room_no", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Room_no", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Room_no", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Room_no", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Assigned_receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_receptionist_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Assigned_receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_receptionist_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_F_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_M_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M_Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_M_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_L_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sex", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Patient_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_Type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Patient_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Check_in_Receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Check_in_Receptionist_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Check_in_Receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Check_in_Receptionist_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Assigned_Doc_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_Doc_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Assigned_Doc_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_Doc_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[In_Patient] ([Patient_ID], [Date_of_admission], [Room_no], [Assigned_receptionist_ID]) VALUES (@Patient_ID, @Date_of_admission, @Room_no, @Assigned_receptionist_ID);
-SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_Patient WHERE (Patient_ID = @Patient_ID)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Patient] ([Patient_ID], [F_Name], [M_Name], [L_Name], [Age], [Sex], [Patient_Type], [Check_in_Receptionist_ID], [Assigned_Doc_ID]) VALUES (@Patient_ID, @F_Name, @M_Name, @L_Name, @Age, @Sex, @Patient_Type, @Check_in_Receptionist_ID, @Assigned_Doc_ID);
+SELECT Patient_ID, F_Name, M_Name, L_Name, Age, Sex, Patient_Type, Check_in_Receptionist_ID, Assigned_Doc_ID FROM Patient WHERE (Patient_ID = @Patient_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Patient_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date_of_admission", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date_of_admission", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Room_no", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Room_no", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Assigned_receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_receptionist_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@F_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@M_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@L_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sex", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Patient_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Check_in_Receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Check_in_Receptionist_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Assigned_Doc_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_Doc_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[In_Patient] SET [Patient_ID] = @Patient_ID, [Date_of_admission] = @Date_of_admission, [Room_no] = @Room_no, [Assigned_receptionist_ID] = @Assigned_receptionist_ID WHERE (([Patient_ID] = @Original_Patient_ID) AND ((@IsNull_Date_of_admission = 1 AND [Date_of_admission] IS NULL) OR ([Date_of_admission] = @Original_Date_of_admission)) AND ((@IsNull_Room_no = 1 AND [Room_no] IS NULL) OR ([Room_no] = @Original_Room_no)) AND ((@IsNull_Assigned_receptionist_ID = 1 AND [Assigned_receptionist_ID] IS NULL) OR ([Assigned_receptionist_ID] = @Original_Assigned_receptionist_ID)));
-SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_Patient WHERE (Patient_ID = @Patient_ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Patient] SET [Patient_ID] = @Patient_ID, [F_Name] = @F_Name, [M_Name] = @M_Name, [L_Name] = @L_Name, [Age] = @Age, [Sex] = @Sex, [Patient_Type] = @Patient_Type, [Check_in_Receptionist_ID] = @Check_in_Receptionist_ID, [Assigned_Doc_ID] = @Assigned_Doc_ID WHERE (([Patient_ID] = @Original_Patient_ID) AND ([F_Name] = @Original_F_Name) AND ((@IsNull_M_Name = 1 AND [M_Name] IS NULL) OR ([M_Name] = @Original_M_Name)) AND ([L_Name] = @Original_L_Name) AND ([Age] = @Original_Age) AND ([Sex] = @Original_Sex) AND ((@IsNull_Patient_Type = 1 AND [Patient_Type] IS NULL) OR ([Patient_Type] = @Original_Patient_Type)) AND ((@IsNull_Check_in_Receptionist_ID = 1 AND [Check_in_Receptionist_ID] IS NULL) OR ([Check_in_Receptionist_ID] = @Original_Check_in_Receptionist_ID)) AND ((@IsNull_Assigned_Doc_ID = 1 AND [Assigned_Doc_ID] IS NULL) OR ([Assigned_Doc_ID] = @Original_Assigned_Doc_ID)));
+SELECT Patient_ID, F_Name, M_Name, L_Name, Age, Sex, Patient_Type, Check_in_Receptionist_ID, Assigned_Doc_ID FROM Patient WHERE (Patient_ID = @Patient_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Patient_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date_of_admission", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date_of_admission", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Room_no", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Room_no", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Assigned_receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_receptionist_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@F_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@M_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@L_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L_Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sex", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Patient_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Check_in_Receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Check_in_Receptionist_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Assigned_Doc_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_Doc_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Patient_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Date_of_admission", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date_of_admission", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date_of_admission", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date_of_admission", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Room_no", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Room_no", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Room_no", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Room_no", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Assigned_receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_receptionist_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Assigned_receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_receptionist_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_F_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "F_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_M_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M_Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_M_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_L_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L_Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sex", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sex", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Patient_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_Type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Patient_Type", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Patient_Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Check_in_Receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Check_in_Receptionist_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Check_in_Receptionist_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Check_in_Receptionist_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Assigned_Doc_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_Doc_ID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Assigned_Doc_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Assigned_Doc_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -897,8 +1075,8 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM dbo." +
-                "In_Patient";
+            this._commandCollection[0].CommandText = "SELECT Patient_ID, F_Name, M_Name, L_Name, Age, Sex, Patient_Type, Check_in_Recep" +
+                "tionist_ID, Assigned_Doc_ID FROM dbo.Patient";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -906,7 +1084,7 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HospitalDBDataSet.In_PatientDataTable dataTable) {
+        public virtual int Fill(HospitalDBDataSet1.PatientDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -919,9 +1097,9 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HospitalDBDataSet.In_PatientDataTable GetData() {
+        public virtual HospitalDBDataSet1.PatientDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HospitalDBDataSet.In_PatientDataTable dataTable = new HospitalDBDataSet.In_PatientDataTable();
+            HospitalDBDataSet1.PatientDataTable dataTable = new HospitalDBDataSet1.PatientDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -929,15 +1107,15 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HospitalDBDataSet.In_PatientDataTable dataTable) {
+        public virtual int Update(HospitalDBDataSet1.PatientDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HospitalDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "In_Patient");
+        public virtual int Update(HospitalDBDataSet1 dataSet) {
+            return this.Adapter.Update(dataSet, "Patient");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -959,31 +1137,58 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Patient_ID, global::System.Nullable<global::System.DateTime> Original_Date_of_admission, global::System.Nullable<int> Original_Room_no, global::System.Nullable<int> Original_Assigned_receptionist_ID) {
+        public virtual int Delete(int Original_Patient_ID, string Original_F_Name, string Original_M_Name, string Original_L_Name, int Original_Age, string Original_Sex, string Original_Patient_Type, global::System.Nullable<int> Original_Check_in_Receptionist_ID, global::System.Nullable<int> Original_Assigned_Doc_ID) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Patient_ID));
-            if ((Original_Date_of_admission.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Date_of_admission.Value));
+            if ((Original_F_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_F_Name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_F_Name));
             }
-            if ((Original_Room_no.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Room_no.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Assigned_receptionist_ID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Assigned_receptionist_ID.Value));
+            if ((Original_M_Name == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_M_Name));
+            }
+            if ((Original_L_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_L_Name");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_L_Name));
+            }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Age));
+            if ((Original_Sex == null)) {
+                throw new global::System.ArgumentNullException("Original_Sex");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Sex));
+            }
+            if ((Original_Patient_Type == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Patient_Type));
+            }
+            if ((Original_Check_in_Receptionist_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Check_in_Receptionist_ID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Assigned_Doc_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_Assigned_Doc_ID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1005,25 +1210,50 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Patient_ID, global::System.Nullable<global::System.DateTime> Date_of_admission, global::System.Nullable<int> Room_no, global::System.Nullable<int> Assigned_receptionist_ID) {
+        public virtual int Insert(int Patient_ID, string F_Name, string M_Name, string L_Name, int Age, string Sex, string Patient_Type, global::System.Nullable<int> Check_in_Receptionist_ID, global::System.Nullable<int> Assigned_Doc_ID) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Patient_ID));
-            if ((Date_of_admission.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Date_of_admission.Value));
+            if ((F_Name == null)) {
+                throw new global::System.ArgumentNullException("F_Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(F_Name));
             }
-            if ((Room_no.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Room_no.Value));
-            }
-            else {
+            if ((M_Name == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Assigned_receptionist_ID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Assigned_receptionist_ID.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(M_Name));
+            }
+            if ((L_Name == null)) {
+                throw new global::System.ArgumentNullException("L_Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(L_Name));
+            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Age));
+            if ((Sex == null)) {
+                throw new global::System.ArgumentNullException("Sex");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Sex));
+            }
+            if ((Patient_Type == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Patient_Type));
+            }
+            if ((Check_in_Receptionist_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(Check_in_Receptionist_ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Assigned_Doc_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Assigned_Doc_ID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1045,50 +1275,120 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Patient_ID, global::System.Nullable<global::System.DateTime> Date_of_admission, global::System.Nullable<int> Room_no, global::System.Nullable<int> Assigned_receptionist_ID, int Original_Patient_ID, global::System.Nullable<global::System.DateTime> Original_Date_of_admission, global::System.Nullable<int> Original_Room_no, global::System.Nullable<int> Original_Assigned_receptionist_ID) {
+        public virtual int Update(
+                    int Patient_ID, 
+                    string F_Name, 
+                    string M_Name, 
+                    string L_Name, 
+                    int Age, 
+                    string Sex, 
+                    string Patient_Type, 
+                    global::System.Nullable<int> Check_in_Receptionist_ID, 
+                    global::System.Nullable<int> Assigned_Doc_ID, 
+                    int Original_Patient_ID, 
+                    string Original_F_Name, 
+                    string Original_M_Name, 
+                    string Original_L_Name, 
+                    int Original_Age, 
+                    string Original_Sex, 
+                    string Original_Patient_Type, 
+                    global::System.Nullable<int> Original_Check_in_Receptionist_ID, 
+                    global::System.Nullable<int> Original_Assigned_Doc_ID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Patient_ID));
-            if ((Date_of_admission.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Date_of_admission.Value));
+            if ((F_Name == null)) {
+                throw new global::System.ArgumentNullException("F_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(F_Name));
             }
-            if ((Room_no.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Room_no.Value));
-            }
-            else {
+            if ((M_Name == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Assigned_receptionist_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Assigned_receptionist_ID.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(M_Name));
+            }
+            if ((L_Name == null)) {
+                throw new global::System.ArgumentNullException("L_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(L_Name));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Patient_ID));
-            if ((Original_Date_of_admission.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_Date_of_admission.Value));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Age));
+            if ((Sex == null)) {
+                throw new global::System.ArgumentNullException("Sex");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Sex));
+            }
+            if ((Patient_Type == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_Room_no.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Room_no.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Patient_Type));
+            }
+            if ((Check_in_Receptionist_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Check_in_Receptionist_ID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Assigned_Doc_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Assigned_Doc_ID.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_Assigned_receptionist_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Assigned_receptionist_ID.Value));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Patient_ID));
+            if ((Original_F_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_F_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_F_Name));
+            }
+            if ((Original_M_Name == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_M_Name));
+            }
+            if ((Original_L_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_L_Name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_L_Name));
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_Age));
+            if ((Original_Sex == null)) {
+                throw new global::System.ArgumentNullException("Original_Sex");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Sex));
+            }
+            if ((Original_Patient_Type == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Patient_Type));
+            }
+            if ((Original_Check_in_Receptionist_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Check_in_Receptionist_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Assigned_Doc_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_Assigned_Doc_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1110,8 +1410,25 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Date_of_admission, global::System.Nullable<int> Room_no, global::System.Nullable<int> Assigned_receptionist_ID, int Original_Patient_ID, global::System.Nullable<global::System.DateTime> Original_Date_of_admission, global::System.Nullable<int> Original_Room_no, global::System.Nullable<int> Original_Assigned_receptionist_ID) {
-            return this.Update(Original_Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID, Original_Patient_ID, Original_Date_of_admission, Original_Room_no, Original_Assigned_receptionist_ID);
+        public virtual int Update(
+                    string F_Name, 
+                    string M_Name, 
+                    string L_Name, 
+                    int Age, 
+                    string Sex, 
+                    string Patient_Type, 
+                    global::System.Nullable<int> Check_in_Receptionist_ID, 
+                    global::System.Nullable<int> Assigned_Doc_ID, 
+                    int Original_Patient_ID, 
+                    string Original_F_Name, 
+                    string Original_M_Name, 
+                    string Original_L_Name, 
+                    int Original_Age, 
+                    string Original_Sex, 
+                    string Original_Patient_Type, 
+                    global::System.Nullable<int> Original_Check_in_Receptionist_ID, 
+                    global::System.Nullable<int> Original_Assigned_Doc_ID) {
+            return this.Update(Original_Patient_ID, F_Name, M_Name, L_Name, Age, Sex, Patient_Type, Check_in_Receptionist_ID, Assigned_Doc_ID, Original_Patient_ID, Original_F_Name, Original_M_Name, Original_L_Name, Original_Age, Original_Sex, Original_Patient_Type, Original_Check_in_Receptionist_ID, Original_Assigned_Doc_ID);
         }
     }
     
@@ -1127,7 +1444,7 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         
         private UpdateOrderOption _updateOrder;
         
-        private In_PatientTableAdapter _in_PatientTableAdapter;
+        private PatientTableAdapter _patientTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1149,12 +1466,12 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public In_PatientTableAdapter In_PatientTableAdapter {
+        public PatientTableAdapter PatientTableAdapter {
             get {
-                return this._in_PatientTableAdapter;
+                return this._patientTableAdapter;
             }
             set {
-                this._in_PatientTableAdapter = value;
+                this._patientTableAdapter = value;
             }
         }
         
@@ -1177,9 +1494,9 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._in_PatientTableAdapter != null) 
-                            && (this._in_PatientTableAdapter.Connection != null))) {
-                    return this._in_PatientTableAdapter.Connection;
+                if (((this._patientTableAdapter != null) 
+                            && (this._patientTableAdapter.Connection != null))) {
+                    return this._patientTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1194,7 +1511,7 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._in_PatientTableAdapter != null)) {
+                if ((this._patientTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1206,14 +1523,14 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(HospitalDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(HospitalDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._in_PatientTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.In_Patient.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._patientTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Patient.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._in_PatientTableAdapter.Update(updatedRows));
+                    result = (result + this._patientTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1225,13 +1542,13 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(HospitalDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(HospitalDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._in_PatientTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.In_Patient.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._patientTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Patient.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._in_PatientTableAdapter.Update(addedRows));
+                    result = (result + this._patientTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1243,13 +1560,13 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(HospitalDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(HospitalDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._in_PatientTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.In_Patient.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._patientTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Patient.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._in_PatientTableAdapter.Update(deletedRows));
+                    result = (result + this._patientTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1285,15 +1602,15 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(HospitalDBDataSet dataSet) {
+        public virtual int UpdateAll(HospitalDBDataSet1 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._in_PatientTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._in_PatientTableAdapter.Connection) == false))) {
+            if (((this._patientTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._patientTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1329,13 +1646,13 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._in_PatientTableAdapter != null)) {
-                    revertConnections.Add(this._in_PatientTableAdapter, this._in_PatientTableAdapter.Connection);
-                    this._in_PatientTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._in_PatientTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._in_PatientTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._in_PatientTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._in_PatientTableAdapter.Adapter);
+                if ((this._patientTableAdapter != null)) {
+                    revertConnections.Add(this._patientTableAdapter, this._patientTableAdapter.Connection);
+                    this._patientTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._patientTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._patientTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._patientTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._patientTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1396,9 +1713,9 @@ SELECT Patient_ID, Date_of_admission, Room_no, Assigned_receptionist_ID FROM In_
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._in_PatientTableAdapter != null)) {
-                    this._in_PatientTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._in_PatientTableAdapter]));
-                    this._in_PatientTableAdapter.Transaction = null;
+                if ((this._patientTableAdapter != null)) {
+                    this._patientTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._patientTableAdapter]));
+                    this._patientTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

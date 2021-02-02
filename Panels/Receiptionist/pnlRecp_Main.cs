@@ -92,6 +92,8 @@ namespace DBMS_App.Panels.Receiptionist
 
             Program.sqlConnection.Close();
 
+            MessageBox.Show("Patient Added with Id: " + Convert.ToString(P_Id));
+
            
         }
 
